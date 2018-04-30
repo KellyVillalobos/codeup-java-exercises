@@ -8,7 +8,7 @@ public class HelloWorld{
         String myString = "This is a string";
         System.out.println(myString);
 
-        long myNumber = 123L;
+        double myNumber = 3.14;
         System.out.println(myNumber);
 
 
