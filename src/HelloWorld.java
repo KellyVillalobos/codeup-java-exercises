@@ -8,6 +8,9 @@ public class HelloWorld{
         String myString = 3.14159;
         System.out.println(myString);
 
+        long myNumber = ;
+        System.out.println(myNumber);
+
 
     }
 
