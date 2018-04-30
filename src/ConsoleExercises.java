@@ -2,15 +2,30 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
-        int userInput;
+        String userInput;
         Scanner sc;
 
         sc = new Scanner(System.in).useDelimiter("\n");
 
-        System.out.print("Enter a number: ");
-        userInput = sc.nextInt();
+        String one;
+        String two;
+        String three;
 
-        System.out.println("You Entered: --> \"" + userInput + "\" <--");
+        Scanner scan;
+
+        scan = new Scanner(System.in);
+
+        System.out.print("Enter three words: ");
+        one = scan.next();
+        two = scan.next();
+        three = scan.next();
+         System.out.println("You entered: --->\"" + one + "\" <---");
+         System.out.println("You entered: --->\"" + two + "\" <---");
+         System.out.println("You entered: --->\"" + three + "\" <---");
+
+
+
+//        System.out.println("You Entered: --> \"" + userInput + "\" <--");
 
 
 
