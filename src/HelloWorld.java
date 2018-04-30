@@ -5,10 +5,10 @@ public class HelloWorld{
         int myFavoriteNumber = 39;
         System.out.println(myFavoriteNumber);
 
-        String myString = 3.14159;
+        String myString = "This is a string";
         System.out.println(myString);
 
-        long myNumber = 3.14;
+        long myNumber = 123L;
         System.out.println(myNumber);
 
 
