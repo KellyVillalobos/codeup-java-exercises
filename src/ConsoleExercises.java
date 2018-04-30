@@ -15,14 +15,22 @@ public class ConsoleExercises {
 
         scan = new Scanner(System.in);
 
-        System.out.print("Enter three words: ");
-        one = scan.next();
-        two = scan.next();
-        three = scan.next();
-         System.out.println("You entered: --->\"" + one + "\" <---");
-         System.out.println("You entered: --->\"" + two + "\" <---");
-         System.out.println("You entered: --->\"" + three + "\" <---");
+//        System.out.print("Enter three words: ");
+//        one = scan.next();
+//        two = scan.next();
+//        three = scan.nextLine();
+//         System.out.println("You entered: --->\"" + one + "\" <---");
+//         System.out.println("You entered: --->\"" + two + "\" <---");
+//         System.out.println("You entered: --->\"" + three + "\" <---");
 
+
+
+
+         System.out.print("Enter a sentence: ");
+
+         String sentenceString = scan.nextLine();
+
+        System.out.println("You typed: \"" + sentenceString );
 
 
 //        System.out.println("You Entered: --> \"" + userInput + "\" <--");
