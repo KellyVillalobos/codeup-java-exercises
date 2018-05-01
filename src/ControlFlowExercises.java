@@ -3,24 +3,40 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        String userInput;
-        Scanner scan;
 
-        scan = new Scanner(System.in);
-        System.out.println("What number would you like to go to?: ");
-        userInput = scan.nextLine();
+        Scanner input = new Scanner(System.in);
+        String userChoice;
+        do {
+            System.out.println("Enter your grade here: ");
+            short gradeNumber = input.nextShort();
 
-        System.out.println("Here's your table");
-        System.out.println("Number | Squared | Cubed ");
-        System.out.println("------ | ------- | ----- ");
-        for(int i = 1; i <= Integer.parseInt(userInput); i ++) {
+            String letterGrade;
+            if(gradeNumber >=90 && gradeNumber <=100){
+                letterGrade = "A";
+            } else if(gradeNumber >= 80) {
+                letterGrade = "B";
+            } else if(gradeNumber >= 70) {
+                letterGrade= "C";
+            }else if(gradeNumber >= 60) {
+                letterGrade = "D";
+            }else if(gradeNumber >=0 && gradeNumber <=59) {
+                letterGrade = "F";
+            } else {
+                letterGrade ="This is not a valid grade. Please try again.";
+            }
 
-            System.out.printf("%-7d| %-8d| %-7d%n", i, i * i, i*i*i);
+System.out.println("The calculated grade for " + gradeNumber + " is a grade of: " + letterGrade);
+            System.out.println("Do you want to calculate another grade?");
+            userChoice =input.next();
+        }while(userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes"));
 
 
-        }
+
+
+
     }
-
-
 }
+
+
+
 
