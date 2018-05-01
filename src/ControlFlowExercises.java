@@ -28,7 +28,7 @@ public class ControlFlowExercises {
 System.out.println("The calculated grade for " + gradeNumber + " is a grade of: " + letterGrade);
             System.out.println("Do you want to calculate another grade?");
             userChoice =input.next();
-        }while(userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes"));
+        }while(userChoice.equals("y") || userChoice.equalsIgnoreCase("yes"));
 
 
 
