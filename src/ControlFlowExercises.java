@@ -1,11 +1,10 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
-       long i = 2L;
 
-        do{
+        for (int i = 5; i <= 15; i += 1) {
             System.out.println(i);
-            i = i * i;
+        }
 
-        }while(i < Math.pow(10,6));
+
+        }
     }
-}
