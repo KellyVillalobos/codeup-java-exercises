@@ -13,9 +13,8 @@ public class MethodsExercises {
     //TODO: Add a modulus function that finds the modulus of two numbers.
 
 
-
     public static int addMe(int numberA, int numberB) {
-        return  numberA + numberB;
+        return numberA + numberB;
 
     }
 
@@ -25,11 +24,17 @@ public class MethodsExercises {
     }
 
     public static int multiplyMe(int numberA, int numberB) {
-        return numberA * numberB;
+        int mult = 0;
+        for (int i = 0; i < numberA; i++) {
+            mult = mult + numberB;
+
+
+        }
+        return mult;
     }
 
     public static int divideMe(int numberA, int numberB) {
-        if(numberB == 0){
+        if (numberB == 0) {
             System.out.println("You cannot divide by zero. Enter number greater than 0.");
         }
         return numberA / numberB;
