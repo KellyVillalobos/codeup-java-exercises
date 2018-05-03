@@ -12,11 +12,21 @@ public class MethodsExercises {
 //        do{
 //            System.out.println(factorial(getInteger(1, 10)));
 //        }while (wantsContinue());
-        do {
-            System.out.println(diceSides(diceGame()));
-        }while (roll());
+        //--calls the game function to start and stores the users input in new variable.
+        int sides = diceGame();
+        //--prompts the user to hit enter to roll;
+        play();
+
+        //prompts the user if he wants to roll again and rolls while playAgain is true
+        do{
+            diceRoll(diceNumber1(sides), diceNumber2(sides));
+        }while
+                (playAgain());
+
+
 
     }
+
 
     //TODO: Each function needs to take two parameters/arguments so that the operation can be performed.
     //
@@ -120,18 +130,47 @@ public class MethodsExercises {
         return sideNumber;
     }
 
-    public static boolean roll() {
+
+    public static boolean play() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Hit spacebar to roll dice");
-        String enter = input.has();
+        System.out.println("Hit enter to roll dice");
+        String enter = input.nextLine();
         return enter.equals("");
     }
 
-    public static int diceSides(int sides) {
-        Scanner roll = new Scanner(System.in);
+    public static int diceRoll(int side1, int side2) {
+        System.out.println("first die: " + side1);
+        System.out.println("second die: " + side2);
 
-        return sides;
 
+
+
+        return 0;
+    }
+    public static boolean playAgain(){
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Would you like to roll again?: ");
+        String playAgain = userInput.next();
+        return playAgain.equals("y") || playAgain.equalsIgnoreCase("yes");
+    }
+
+    public static int diceNumber1(int sideNumber) {
+        int realNum1 = (int) Math.floor(Math.random() * sideNumber) + 1;
+
+        return realNum1;
+    }
+
+    public static int diceNumber2(int sideNumber) {
+        int realNum2 = (int) Math.floor(Math.random() * sideNumber + 1);
+
+        return  realNum2;
+    }
+
+    public static int randomMath(int side1, int side2) {
+//        int side1 = diceNumber1(diceGame());
+//        int side2 = diceNumber2(diceGame());
+
+        return diceRoll(side1, side2);
     }
 
 }
