@@ -14,47 +14,48 @@ public class Input {
     }
 
 
-   public void getString() {
-        System.out.println("enter a string: ");
-          this.scanner.nextLine();
+   public String getString(String prompt) {
+        System.out.println(prompt);
+          return this.scanner.nextLine();
 
+          }
 
-
-    }
-
-    public boolean yesNo() {
-        System.out.println("enter a string: ");
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
         String userInput = this.scanner.nextLine().trim().toLowerCase();
 
-        return userInput == "y" || userInput == "yes";
+        return userInput.equals( "y") || userInput.equalsIgnoreCase("yes");
 
     }
 
-    public int getInt(int min, int max) {
-        System.out.println("Enter a number: ");
+    public int getInt(String prompt) {
+        System.out.println(prompt);
          return this.scanner.nextInt();
 
     }
 
-    public void getInt() {
+    public int getInt(int min, int max) {
         int value;
         do{
-             value = getInt(0, 10);
+             value = getInt(min, max);
 
-        }while (value  < 0 || value > 10);
+        }while (value  < min || value > max);
+        return value;
     }
 
-    public double getDouble(double min, double max) {
+    public double getDouble() {
         System.out.println("Enter a number: ");
         return this.scanner.nextDouble();
     }
 
-    public void  getDouble() {
+    public double  getDouble(double min, double max) {
         double value;
         do{
-            value = getDouble(0.0, 10.0);
+            value = getDouble(min, max);
 
-        }while (value  < 0.0 || value > 10.0);
+        }while (value  < min || value > max);
+        return value;
+
     }
 
 }

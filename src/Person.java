@@ -17,15 +17,20 @@ public class Person {
 
 
         Input i = new Input();
-        i.yesNo();
-
+        i.yesNo("Do you want to continue: ");
+    i.getString("Enter a number:");
 
     }
 
     private String name;
 
+//---constructor---
+    public Person(String personName) {
+            this.name = personName;
+    }
     // returns the person's name
-    public String getName() {
+
+        public String getName() {
         return name;
     }
 
@@ -39,9 +44,7 @@ public class Person {
         System.out.println("Hello " + this.name);
     }
 
-    //---constructor---
-    public Person(String personName) {
-        this.name = personName;
-    }
+
+
 
 }
