@@ -1,15 +1,23 @@
+import util.Input;
+
 public class Person {
     public static void main(String[] args) {
 
-        Person kelly = new Person("Kelly");
+//        Person kelly = new Person("Kelly");
+//
+//        System.out.println(kelly);
+//        System.out.println(kelly.getName());
+//        kelly.setName("Kelly Villalobos");
+//        System.out.println(kelly.name);
+//        kelly.sayHello();
+//
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2);
 
-        System.out.println(kelly);
-        System.out.println(kelly.getName());
-        kelly.setName("Kelly Villalobos");
-        System.out.println(kelly.name);
-        kelly.sayHello();
 
-
+        Input i = new Input();
+        i.yesNo();
 
 
     }
