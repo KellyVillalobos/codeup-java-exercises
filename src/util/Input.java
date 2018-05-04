@@ -22,24 +22,26 @@ public class Input {
     //-----method for prompting user to continue--------
     public boolean yesNo(String prompt) {
         System.out.println(prompt);
-        String userInput = this.scanner.nextLine().trim().toLowerCase();
-
-        return userInput.equals( "y") || userInput.equalsIgnoreCase("yes");
+        String userInput = this.scanner.nextLine();
+        //---------example of auto boxing---------|
+        return "y".equals(userInput) || "yes".equalsIgnoreCase(userInput);
 
     }
     //-----method for prompting user for int-----
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-         return this.scanner.nextInt();
+    public int getInt() {
+        int number = this.scanner.nextInt();
+        scanner.nextLine();
+        return number;
 
     }
     //------method for user input validation for int-----------
     public int getInt(int min, int max) {
-        int value;
-        do{
-             value = getInt(min, max);
+        int value = getInt();
+        if (value  < min || value > max){
+            System.out.printf("Enter a number between %d and %d%n", min, max);
+            return getInt(min,max);
 
-        }while (value  < min || value > max);
+        }
         return value;
     }
     //-----method for prompting user for double-----
@@ -49,11 +51,11 @@ public class Input {
     }
     //------method for validating user input for double------
     public double  getDouble(double min, double max) {
-        double value;
-        do{
-            value = getDouble(min, max);
-
-        }while (value  < min || value > max);
+        double value = getDouble();
+        if(value  < min || value > max){
+            System.out.printf("Enter a number between %f and %f%n", min, max);
+            return getDouble(min, max);
+        }
         return value;
 
     }

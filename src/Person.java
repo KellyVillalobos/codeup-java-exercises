@@ -11,10 +11,10 @@ public class Person {
         System.out.println(kelly.name);
         kelly.sayHello();
 
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1 == person2);
-
+        Input input = new Input();
+        String newName = input.getString("Enter Name:" );
+        Person person = new Person(newName);
+        person.sayHello();
 
 
 
@@ -39,7 +39,7 @@ public class Person {
 
     //-----prints a message to the console using the person's name-------
     public void sayHello() {
-        System.out.println("Hello " + this.name);
+        System.out.printf("Hello %s!%n ", name);
     }
 
 

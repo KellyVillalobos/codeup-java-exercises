@@ -7,7 +7,7 @@ public class CircleApp {
         //-----creates new Input object--------
         Input input = new Input();
         //----prompts user for number of radius--------
-        int radius = input.getInt("Enter radius of circle: ");
+        int radius = input.getInt();
         //----creates new Circle object----
         Circle circle = new Circle(radius);
         //----passes input values to a double----
