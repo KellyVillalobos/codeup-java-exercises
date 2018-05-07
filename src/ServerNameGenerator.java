@@ -11,8 +11,8 @@ public class ServerNameGenerator {
 
         System.out.println(adjectives);
 
-        String adj = adjectives[new Random().nextInt(adjectives.length)];
-        String nou = nouns[new Random().nextInt(nouns.length)];
+        String adj = randomString(adjectives);
+        String nou = randomString(nouns);
 
 //        System.out.println(adj);
 //        System.out.println(nou);
@@ -20,7 +20,11 @@ public class ServerNameGenerator {
         System.out.printf("here is your server name:%n%s-%s ", adj, nou);
 
     }
+public static String randomString(String[] array){
+       String randomArray = array[new Random().nextInt(array.length)];
 
+              return randomArray;
+}
 
 }
 
