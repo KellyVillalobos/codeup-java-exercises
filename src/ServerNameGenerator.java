@@ -17,7 +17,7 @@ public class ServerNameGenerator {
 //        System.out.println(adj);
 //        System.out.println(nou);
 
-        System.out.printf("here is your server name:%n%s %s ", adj, nou);
+        System.out.printf("here is your server name:%n%s-%s ", adj, nou);
 
     }
 
