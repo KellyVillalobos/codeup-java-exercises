@@ -7,10 +7,10 @@ public class ShapesTest {
         Rectangle box2 = new Square(5);
 
 
-        System.out.println(box1.getArea());
-        System.out.println(box1.getPerimeter());
-        System.out.println(box2.getPerimeter());
-        System.out.println(box2.getArea());
+        System.out.println("The area of box1 is: " + box1.getArea());
+        System.out.println("The perimeter of box1 is: " + box1.getPerimeter());
+        System.out.println("The perimeter of box2 with overide is: " + box2.getPerimeter());
+        System.out.println("The area of box2 with overide is: " + box2.getArea());
 
 
     }
