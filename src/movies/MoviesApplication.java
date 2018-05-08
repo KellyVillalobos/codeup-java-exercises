@@ -2,130 +2,78 @@ package movies;
 
 import util.Input;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-import static movies.MoviesArray.findAll;
-
 public class MoviesApplication {
+    public static Movie[] movies = MoviesArray.findAll();
+    public static Input userInput = new Input();
+
     public static void main(String[] args) {
-        allMovies();
 
 
-        System.out.println("What would you like to do?\n\n");
-        System.out.println("0 - exit\n1 - view all movies\n2 - view movies with the animated category\n" +
-                "3 - view movies with the drama category\n4 - view movies with the horror category\n" +
-                "5 - view movies with the scifi category\n\n");
+        System.out.println("Welcome to the MovieApp");
 
-        Input uerInput = new Input();
-//        System.out.println(uerInput.getString("Enter Your choice: "));
-        System.out.println("Enter your choice: ");
+        showMenu();
+    }
 
-        int choice = uerInput.getInt();
+    public static void showMenu() {
 
-        String movieString;
+        do {
+            System.out.println();
+            System.out.println("0 - exit\n1 - view all movies\n2 - view movies with the animated category\n" +
+                    "3 - view movies with the drama category\n4 - view movies with the horror category\n" +
+                    "5 - view movies with the scifi category\n\n");
+            System.out.print("What would you like to do?: ");
+            int choice = getChoice();
+            useChoice(choice);
+        } while (true);
 
+    }
+    public static int getChoice() {
+        return userInput.getInt();
+    }
 
+    public static void useChoice(int choice) {
         switch (choice) {
             case 0:
+                System.out.println("Thank you and Goodbye.");
                 System.exit(0);
-                movieString ="";
                 break;
             case 1:
-                movieString = allMovies();
+                showMovies();
                 break;
             case 2:
-                movieString = allAnimated();
+                showMovies("animated");
                 break;
             case 3:
-                movieString = allDrama();
+                showMovies("drama");
                 break;
             case 4:
-                movieString = allHorror();
+                showMovies("horror");
                 break;
             case 5:
-                movieString = allScifi();
+                showMovies("scifi");
                 break;
+            case 6:
+                showMovies("musical");
             default:
-                movieString = "";
+                System.out.println("Error: Your selection is not a valid choice");
+
         }
-        System.out.println(movieString);
-
-
-
-
 
 
     }
-
-    public static String allMovies() {
-        Movie[] allMovies = findAll();
-        String movieString = "";
-        for (int i = 0; i < allMovies.length; i++) {
-            Movie movie = allMovies[i];
-
-            movieString += (movie.getName() + " - - " + movie.getCategory() + "\n");
-
+    public static void showMovies() {
+        for (Movie movie : movies) {
+            System.out.println(movie);
         }
-        return movieString;
-
-
-
     }
 
-    public static String allDrama(){
-        Movie[] allMovies = findAll();
-        String dramaString = "";
-        for (int i = 0; i < allMovies.length; i++) {
-            if (allMovies[i].getCategory().equals("drama")) {
-                Movie drama = allMovies[i];
-                dramaString += (drama.getName() + " - - " + drama.getCategory() + "\n");
-
+    public static void showMovies(String category) {
+        for (Movie movie : movies) {
+            if (movie.isInCategory(category)) {
+                System.out.println(movie);
             }
         }
-
-        return dramaString;
     }
 
-    public static String allAnimated(){
-        Movie[] allMovies = findAll();
-        String animatedString = "";
-        for (int i = 0; i < allMovies.length ; i++) {
-            if (allMovies[i].getCategory().equals("animated")){
-                Movie animated = allMovies[i];
-                animatedString += (animated.getName() + " - - " + animated.getCategory() + "\n");
-            }
-
-
-        }
-        return animatedString;
-    }
-    public static String allHorror(){
-        Movie[] allMovies = findAll();
-        String horrorString = "";
-        for (int i = 0; i < allMovies.length ; i++) {
-            if (allMovies[i].getCategory().equals("horror")){
-                Movie horror = allMovies[i];
-                horrorString += (horror.getName() + " - - " + horror.getCategory() + "\n");
-            }
-
-
-        }
-        return horrorString;
-    }
-    public static String allScifi(){
-        Movie[] allMovies = findAll();
-        String scifiString = "";
-        for (int i = 0; i < allMovies.length ; i++) {
-            if (allMovies[i].getCategory().equals("scifi")){
-                Movie scifi = allMovies[i];
-                scifiString += (scifi.getName() + " - - " + scifi.getCategory() + "\n");
-            }
-
-
-        }
-        return scifiString;
-    }
-    public static void wantsToContinue(){}
 
 }
