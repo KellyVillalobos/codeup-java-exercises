@@ -21,9 +21,9 @@ public class ServerNameGenerator {
 
     }
 public static String randomString(String[] array){
-       String randomArray = array[new Random().nextInt(array.length)];
+       String randomString = array[new Random().nextInt(array.length)];
 
-              return randomArray;
+              return randomString;
 }
 
 }
