@@ -1,22 +1,41 @@
 package shapes;
 
 public class Rectangle {
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
+    protected String type;
 
     //-----default constructor------|
     public Rectangle(){}
 
-    public Rectangle(int length, int width){
+    public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
+        this.type = "rectangle";
     }
-        public int getArea(){
-           int area = length * width;
+
+    public String getType() {
+        return type;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getArea(){
+           double area = length * width;
         return area;
         }
-        public int getPerimeter(){
-           int perimeter = 2 * length + 2 * width;
+        public double getPerimeter(){
+           double perimeter = 2 * length + 2 * width;
         return perimeter;
+        }
+        public String toString(){
+        return ("A  " + getType() + " with the width of " + getWidth() + " and length of " + getLength() + "  has an area of " + getArea()
+                + " and a perimeter of " + getPerimeter());
         }
 }
