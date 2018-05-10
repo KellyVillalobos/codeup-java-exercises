@@ -29,6 +29,7 @@ public class GameOfWar {
             if (choice == 1) {
                 Player player1 = computer();
                 Player[] player2 = playerName(choice);
+                System.out.println(player2[0].getName());
                 System.out.println(player1.getName());
                 for (Player player: player2){
                     System.out.println(player.getName());
