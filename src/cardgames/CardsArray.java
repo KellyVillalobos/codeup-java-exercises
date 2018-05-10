@@ -1,7 +1,23 @@
 package cardgames;
 
+import java.util.Arrays;
+import java.util.Random;
+
+import static cardgames.GameOfWar.cards;
+
+
 public class CardsArray {
+    public static void main(String[] args) {
+       cards = shuffle(getAllCards());
+
+for (Card card: cards){
+    System.out.println(card);
+}
+
+
+    }
     public static Card[] getAllCards() {
+
         return new Card[]{
                 /* ---------clubs------------ */
                 new Card("clubs", 2),
@@ -63,4 +79,20 @@ public class CardsArray {
         };
 
     }
+
+    public static Card[] shuffle(Card[] arr) {
+        Random random = new Random();
+
+        for (int i = 0; i < arr.length ; i++) {
+            int j = random.nextInt(arr.length);
+
+           Card temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        return arr;
+    }
+
+
+
 }

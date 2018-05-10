@@ -9,4 +9,17 @@ public class Card {
         this.value = value;
 
     }
+
+    public String getSuite() {
+        return suite;
+    }
+
+    public int getValue() {
+        return value;
+    }
+    public String toString(){
+        return getValue() + " of " + getSuite();
+    }
+
+
 }
