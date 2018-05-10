@@ -30,10 +30,17 @@ public class GameOfWar {
                 Player player1 = computer();
                 Player[] player2 = playerName(choice);
                 System.out.println(player1.getName());
-                System.out.println(player2);
+                for (Player player: player2){
+                    System.out.println(player.getName());
+                }
+
+
             } else if (choice == 2) {
 
                 Player[] players = playerName(choice);
+                for (Player player: players){
+                    System.out.println(player.getName());
+                }
             }
         } else {
             System.out.println("Thank you and Goodbye.");
@@ -54,7 +61,8 @@ public class GameOfWar {
     public static Player[] playerName(int numOfPlayers) {
         Player player;
         String name;
-        Player[] players = new Player[2];
+        int j = numOfPlayers;
+        Player[] players = new Player[j];
         for (int i = 0; i < numOfPlayers; i++) {
             int num = i + 1;
             name = userInput.getString("Enter player" + num + " name: ");
