@@ -3,19 +3,21 @@ package cardgames;
 
 import util.Input;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class GameOfWar {
 
-    public static Card[] cards = CardsArray.getAllCards();
+//    public static Shuffler cards = new Shuffler();
 
     public static Input userInput = new Input();
 
     public static void main(String[] args) {
 
 
-        showMenu();
-
+//        showMenu();
+        ArrayList<Card> cards = Deck.getDeck();
+       Shuffler shuffle = new Shuffler(cards);
+        ArrayList<Card> deck = shuffle.shuffle();
 
     }
 
