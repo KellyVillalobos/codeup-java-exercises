@@ -23,19 +23,19 @@ public class Deck {
         cards.add(new Card("clubs", 13));
         cards.add(new Card("clubs", 14));
         /* ---------hearts------------ */
-        cards.add(new Card("heats", 2));
-        cards.add(new Card("heats", 3));
-        cards.add(new Card("heats", 4));
-        cards.add(new Card("heats", 5));
-        cards.add(new Card("heats", 6));
-        cards.add(new Card("heats", 7));
-        cards.add(new Card("heats", 8));
-        cards.add(new Card("heats", 9));
-        cards.add(new Card("heats", 10));
-        cards.add(new Card("heats", 11));
-        cards.add(new Card("heats", 12));
-        cards.add(new Card("heats", 13));
-        cards.add(new Card("heats", 14));
+        cards.add(new Card("hearts", 2));
+        cards.add(new Card("hearts", 3));
+        cards.add(new Card("hearts", 4));
+        cards.add(new Card("hearts", 5));
+        cards.add(new Card("hearts", 6));
+        cards.add(new Card("hearts", 7));
+        cards.add(new Card("hearts", 8));
+        cards.add(new Card("hearts", 9));
+        cards.add(new Card("hearts", 10));
+        cards.add(new Card("hearts", 11));
+        cards.add(new Card("hearts", 12));
+        cards.add(new Card("hearts", 13));
+        cards.add(new Card("hearts", 14));
         /* ---------spades------------ */
         cards.add(new Card("spades", 2));
         cards.add(new Card("spades", 3));

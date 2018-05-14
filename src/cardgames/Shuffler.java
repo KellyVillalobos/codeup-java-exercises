@@ -9,6 +9,7 @@ public class Shuffler {
 
     public Shuffler(ArrayList<Card> cards){
         this.cards = cards;
+
     }
 
 //    public static Card[] getAllCards() {

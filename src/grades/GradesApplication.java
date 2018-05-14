@@ -35,7 +35,7 @@ public class GradesApplication {
         HashMap<String, Student> students = new HashMap<>();
         students.put("GitWolf", student1);
         students.put("LanceCrowder", student2);
-        students.put("chrishughallen", student3);
+        students.put("nestorsalinas88", student3);
         students.put("DataQueen16", student4);
 
 
@@ -67,12 +67,12 @@ public class GradesApplication {
         }
             String choice = userInput.getString("\n\nWhat student would you like to see more information on? ");
             if (students.containsKey(choice)) {
+                System.out.println("Name: " + students.get(choice).getName() + " --Github username: " + choice);
                 System.out.println("Current grade average: " + students.get(choice).getGradeAverage());
-                System.out.println("Name: " + students.get(choice).getName() + " Github username: " + choice);
 
             } else
                 System.out.println("Choice not found");
-        } while (userInput.yesNo("Would you like to continue?"));
+        } while (userInput.yesNo("\nWould you like to continue?"));
     }
 
 
