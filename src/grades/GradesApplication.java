@@ -1,12 +1,8 @@
 package grades;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-
 import util.Input;
 
-import static java.lang.String.valueOf;
+import java.util.HashMap;
 
 public class GradesApplication {
     public static Input userInput = new Input();
@@ -48,11 +44,10 @@ public class GradesApplication {
                 "                 |/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|\n");
 
 
-        System.out.println("Here are the github usernames of our students: \n\n");
+        System.out.println("Here are the github usernames of our students: \n");
 
 
-
-            handleChoice(students);
+        handleChoice(students);
 
 
     }
@@ -63,15 +58,16 @@ public class GradesApplication {
         do {
 
             for (String student : students.keySet()) {
-            System.out.printf(" |%2s|", student);
-        }
+                System.out.printf(" |%2s|", student);
+            }
             String choice = userInput.getString("\n\nWhat student would you like to see more information on? ");
             if (students.containsKey(choice)) {
                 System.out.println("Name: " + students.get(choice).getName() + " --Github username: " + choice);
                 System.out.println("Current grade average: " + students.get(choice).getGradeAverage());
 
-            } else
+            } else {
                 System.out.println("Choice not found");
+            }
         } while (userInput.yesNo("\nWould you like to continue?"));
     }
 
