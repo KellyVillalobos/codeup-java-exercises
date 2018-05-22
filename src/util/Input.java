@@ -26,13 +26,13 @@ public class Input {
 
     //-----method for prompting user to continue--------
     public boolean yesNo() {
-        String userInput = this.scanner.nextLine();
+        String userInput = this.scanner.next();
         return "y".equals(userInput) || "yes".equalsIgnoreCase(userInput);
     }
 
     public boolean yesNo(String prompt) {
         System.out.println(prompt);
-        String userInput = this.scanner.nextLine();
+        String userInput = this.scanner.next();
         //---------example of auto boxing---------|
         return "y".equals(userInput) || "yes".equalsIgnoreCase(userInput);
 
@@ -40,8 +40,9 @@ public class Input {
 
     //-----method for prompting user for int-----
     public int getInt() {
+        String input = getString();
         try {
-            int number = Integer.valueOf(getString());
+            int number = Integer.valueOf(input);
             return number;
         } catch (NumberFormatException e) {
             System.out.println("input needs to be an integer");
@@ -63,8 +64,9 @@ public class Input {
 
     //-----method for prompting user for double-----
     public double getDouble() {
+        String input = getString();
         try {
-            double number = Double.valueOf(getString());
+            double number = Double.valueOf(input);
             return number;
         } catch (NumberFormatException e) {
             System.out.println("number needs to be in double format 00.00");
